@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rissi Kumar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+ 
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <style>#popup-message {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: #fff; 
+    padding: 20px 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    text-align: center;
+    animation: popIn 0.5s ease-out, wiggle 0.5s ease-in-out 0.5s;
+  }
+  
+  #popup-message p {
+    margin: 0; 
+    font-size: 20px; 
+    color: #333; 
+    font-weight: bold;
+  }
+  
+  #popup-message::before {
+    content: '📄';
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes popIn {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-50%, -50%) rotate(-5deg); }
+    75% { transform: translate(-50%, -50%) rotate(5deg); }
+  }
+  
+  /* Optional: Add a subtle hover effect to the download button */
+  #download-cv-btn {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  #download-cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }</style>  
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#">
+        <h1 class="logo">Rissi Kumar Prabhakaran</h1>
+      </a>
+  
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      </button>
+  
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
+          <li><a href="#about" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="#portfolio" class="navbar-link" data-nav-link>Work</a></li>
+          <li><a href="#skills" class="navbar-link" data-nav-link>Skills</a></li>
+          <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
+          <li>
+            <a href="assets\MY_CV\Rissis_Resume.pdf" class="btn btn-primary" id="download-cv-btn" download>Download CV</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadBtn = document.getElementById('download-cv-btn');
+      const popupMessage = document.getElementById('popup-message');
+    
+      downloadBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+    
+        popupMessage.style.animation = 'none';
+        popupMessage.offsetHeight; // Trigger reflow
+        popupMessage.style.animation = null;
+    
+        popupMessage.style.display = 'block';
+    
+        setTimeout(function() {
+          popupMessage.style.display = 'none';
+          window.location.href = downloadBtn.href;
+        }, 3000);
+      });
+    });
+    </script>
+  
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-banner">
+        <div class="image-wrapper">
+          <img src="assets\images\rissi profile pic1.jpg" alt="Rissi's Photo" class="img-cover">
+        </div>
+      </div>  
+  
+      <div class="hero-content">
+        <h2 class="hero-title">
+          <span>Hello I'm</span>
+          <strong>Rissi Kumar Prabhakaran</strong>
+          <span>I am a Data Scientist</span>
+        </h2>
+  
+        <div class="btn-group">
+          <a href="#about" class="btn">About Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div id="popup-message" style="display: none;">
+    <p>A'ight have a look at my CV!</p>
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about">
+        <div class="container">
+          <figure class="about-banner">
+            <div class="image-wrapper cub-photo-wrapper">
+              <img src="assets\images\cub photo.jpg" width="800" height="652" loading="lazy" alt="Rissi's Cub Photo" class="img-cover">
+            </div>
+          </figure>
+      
+          <div class="about-content">
+          <!--   <p class="section-subtitle">I'm a Developer</p> -->
+            <h2 class="h2 section-title">So who am I?</h2>
+            <p class="section-text">
+              Well, I am an enthusiastic graduate student in data science with a strong desire to extract meaningful 
+              insights from raw data for making important decisions. I am excited about the opportunity to use my
+              skills in data analysis, machine learning, and statistical modeling to tackle complex problems and provide
+              creative, data-driven solutions. Working in fast-paced, ever-changing settings is a perfect fit for my
+              collaborative spirit and problem-solving abilities. My genuine desire to make a difference drives me to
+              use data to improve process efficiency, guide strategy, and bring about meaningful social change.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Your Portfolio</title>
+          <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+      </head>
+      <body>
+      
+          <!-- Other sections like About, Skills, etc. -->
+          <section class="about">
+              <!-- About section content here -->
+          </section>
+      
+          <section class="skills">
+              <!-- Skills section content here -->
+          </section>
+      
+          <!-- Portfolio Section -->
+          <section class="section portfolio" id="portfolio">
+              <div class="container">
+                  <p class="section-text" style="font-size: 24px;">
+                      Take a look at some of my work 
+                  </p>
+      
+                  <ul class="portfolio-list">
+                      <li>
+                          <a href="https://github.com/RISSIKUMARP/Smart-Fields" class="portfolio-card" style="background-image: url('assets/images/smart fields.jpg')">
+                              <div class="card-content">
+                                  <h3 class="h3 card-title">Smart Fields: Enhancing Agriculture with Machine Learning</h3>
+                                  <span class="btn-link">
+                                      <span>View Work</span>
+                                      <ion-icon name="arrow-forward"></ion-icon>
+                                  </span>
+                              </div>
+                          </a>
+                      </li>
+      
+                      <li>
+                          <a href="https://github.com/RISSIKUMARP/AUDIRE" class="portfolio-card" style="background-image: url('assets/images/Audirenew.jpg')">
+                              <div class="card-content">
+                                  <h3 class="h3 card-title">Audire</h3>
+                                  <span class="btn-link">
+                                      <span>View Project</span>
+                                      <ion-icon name="arrow-forward"></ion-icon>
+                                  </span>
+                              </div>
+                          </a>
+                      </li>
+      
+                      <li>
+                          <a href="https://github.com/RISSIKUMARP/Mini-Projects" class="portfolio-card" style="background-image: url('assets/images/mininew.jpg')">
+                              <div class="card-content">
+                                  <h3 class="h3 card-title">Mini Projects</h3>
+                                  <span class="btn-link">
+                                      <span>View Projects</span>
+                                      <ion-icon name="arrow-forward"></ion-icon>
+                                  </span>
+                              </div>
+                          </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="section skills" id="skills">
+        <div class="container">
+          <p class="section-subtitle">Skills</p>
+      
+          
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fas fa-code"></i>
+                <h3 class="skills-title">Languages - Python, R</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3 class="skills-title">Database - SQL, NOSQL[MongoDB]</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fas fa-chart-bar"></i>
+                <h3 class="skills-title">Data Analysis - NUMPY, PANDAS, MATPLOTLIB, SEABORN</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fas fa-chart-pie"></i>
+                <h3 class="skills-title">Data Visualization - MS EXCEL, POWER-BI, TABLEAU</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fab fa-git-alt"></i>
+                <h3 class="skills-title">Git</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fas fa-brain"></i>
+                <h3 class="skills-title">ML - SCIKIT_LEARN, DL - TENSORFLOW, PYTORCH</h3>              
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fab fa-aws"></i>
+                <h3 class="skills-title">Cloud - AWS</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fab fa-flask flask-icon"></i>
+                <h3 class="skills-title">Flask</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fab fa-docker"></i>
+                <h3 class="skills-title">Docker</h3>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-box">
+                <i class="fas fa-box"></i>
+                <h3 class="skills-title">BentoML</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+<!-- 
+        - #CONTACT
+      -->
+      <section class="contact">
+        <h2 class="section-title" style="color: orange;">Get in Touch</h2>
+        <ul class="contact-list">
+            <li class="contact-item">
+                <a href="mailto:ripr8775@colorado.edu" class="contact-item-link">
+                    <i class="fas fa-envelope contact-icon"></i> <!-- Email Icon -->
+                    <span class="contact-item-title">Email</span>
+                </a>
+            </li>
+          <li class="contact-item">
+            <a href="https://www.linkedin.com/in/rissi-kumar-prabhakaran/" class="contact-item-link" target="_blank">
+              <i class="fab fa-linkedin contact-icon"></i> <!-- LinkedIn Icon -->
+              <span class="contact-item-title">LinkedIn</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="https://github.com/RISSIKUMARP" class="contact-item-link" target="_blank">
+              <i class="fab fa-github contact-icon"></i> <!-- GitHub Icon -->
+              <span class="contact-item-title">GitHub</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <div class="contact-item-content">
+                <i class="fas fa-phone contact-icon"></i> <!-- Phone Call Icon -->
+                <span class="contact-item-title">Call</span>
+                <span class="contact-item-info">+1 720-270-5065</span>
+            </div>
+        </li>
+        </ul>
+      </section>
+      
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright" style="color: white;">
+        &copy; <a href="#" class="copyright-link" style="color: white;">RissiKumarPrabhakaran</a>. All Rights Reserved
+      </p>
+    </div>
+  </footer>
+  
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-to-top" style="color: black;"data-back-to-top>BACK TOP</a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
