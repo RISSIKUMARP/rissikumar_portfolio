@@ -1,54 +1,31 @@
-<div align="center">
-  
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/portfolio)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/portfolio?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/SAu7e09vXoQ?style=social)](https://youtu.be/SAu7e09vXoQ)
+Here's a personalized README file for your GitHub profile based on your portfolio:
 
-  <br />
-  <br />
+---
 
-  <h2 align="center">Personal Portfolio Website</h2>
+### Hi 👋, I'm Rissi Kumar Prabhakaran  
+**Exploring the Future of Technology and Data Science 🚀**
 
-  Fully responsive personal portfolio website, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
+#### 🎓 Developer from Boulder, Colorado  
+#### 🌱 Passionate about AI, Machine Learning, and Web Development
 
-  <a href="https://codewithsadee.github.io/portfolio/"><strong>➥ Live Demo</strong></a>
+---
 
-</div>
+### 🌟 About Me  
+- 🌍 Experienced in building AI-driven applications like **Smart Fields** for enhancing agriculture with machine learning techniques.  
+- 💻 Developed projects such as **Audire** and many **Mini Projects** that demonstrate my versatility in creating impactful solutions across various domains.  
+- 🔥 Currently focused on understanding and solving challenges in AI, web development, and data science.  
+- 🎯 Always looking to contribute to meaningful projects and collaborate with fellow developers to push the boundaries of innovation.
 
-<br />
+---
 
-### Demo Screeshots
+### 🌍 Let's Connect  
+- 💼 Check out my portfolio for detailed work on **AI in Agriculture**, **Helping the Disabled**, and more.  
+- 🔗 [GitHub](https://rissikumarp.github.io/rissikumar_portfolio/) | [Email](mailto:ripr8775@colorado.edu)  
+- 🤝 Open to collaborations and connecting with like-minded professionals.
 
-![Portfolio Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+---
 
-### Prerequisites
+**Languages and Tools:**  
+`Python` | `JavaScript` | `HTML/CSS` | `React` | `MongoDB` | `Node.js` | `TensorFlow` | `AWS`
 
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-### Run Locally
-
-To run **Portfolio** locally, run this command on your git bash:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/portfolio.git
-```
-
-### Contact
-
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-### License
-
-This project is **free to use** and does not contains any license.
+---

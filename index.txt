@@ -1,173 +1,124 @@
-Rissi Kumar Prabhakaran - Developer from Boulder
-
-
+---
 
 #---------- HEADER ----------#
 
-Rissi Kumar Prabhakaran
+**Rissi Kumar Prabhakaran**
 
 aria-label = Toggle Menu
 
-<ion-icon name="menu-outline"></ion-icon>
+<ion-icon name="menu-outline"></ion-icon>  
 <ion-icon name="close-outline"></ion-icon>
 
-Home
-About
-Portfolio
-Skills
-Contact
-Blog
+- Home
+- About
+- Portfolio
+- Skills
+- Contact
+- Blog
 
-Download CV
-
+**Download CV**
 
 
 #---------- HERO ----------#
 
-alt = Ethan's Photo
+alt = "Rissi's Photo"  
+alt = "I'm a Developer from Boulder"
 
-alt = I'm developer from Boulder
+**Hello, I'm**
 
-Hello I'm
+**Rissi Kumar Prabhakaran**  
+Developer from Boulder, Colorado
 
-Rissi Kumar Prabhakaran
-
-Developer from Boudler
-
-
-
-Get a Quote
-
-About Me
-
+**Get a Quote**  
+**About Me**
 
 
 #---------- ABOUT ----------#
 
-alt = Ethan's Photo
+alt = "Rissi's Photo"  
+alt = "Rissi's Photo"
 
-alt = Ethan's Photo
+<ion-icon name="logo-python"></ion-icon>  
+<ion-icon name="logo-javascript"></ion-icon>  
+<ion-icon name="logo-react"></ion-icon>
 
-<ion-icon name="logo-css3"></ion-icon>
-<ion-icon name="logo-javascript"></ion-icon>
-<ion-icon name="logo-angular"></ion-icon>
+**I'm a Developer**
 
-I'm a Developer
+I develop data-driven applications and AI models that empower people and solve real-world challenges.
 
-I Develop Application that Help People
+**Diverse Skillset** in AI,ML and data science. Passionate about harnessing technology to improve sustainability and urban infrastructure.
 
-Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu epteur sint occaecat cupidatat
-
-Krnon proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
-
-View Portfolio
-
+**View Portfolio**
 
 
 #---------- PORTFOLIO ----------#
 
-Portfolio
+**Portfolio**
 
-My Amazing Works
+**Featured Projects**
 
-Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate
+Projects that solve real-world problems using cutting-edge technologies.
 
-Youtube
-
-Web Application for Desiverse
-
-View Project 
+**Smart Fields**  
+An AI-driven solution that enhances agricultural productivity.  
+**View Project**  
 <ion-icon name="arrow-forward"></ion-icon>
 
-Vimeo
+**Audire**  
+Advanced ML project for helping the disabled prople to feel in the community and also a job fetching system.  
+**View Project**  
+<ion-icon name="arrow-forward"></ion-icon>
 
-Soundcloud
-
-Details
-
-
-
-#---------- SKILLS ----------#
-
-My Skills
-
-I Develop Skills Regularly
-
-Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate
-
-CSS
-95%
-
-React
-75%
-
-MongoDB
-90%
-
-Python
-70%
-
-PHP
-80%
-
-JavaScript
-75%
-
+**Mini Projects**  
+A variety of smaller projects demonstrating my technical skills.  
+**View Projects**  
+<ion-icon name="arrow-forward"></ion-icon>
 
 
 #---------- CONTACT ----------#
 
-Don't be shy
+**Don't be shy**  
+**Drop me a line**
 
-Drop Me a Line
-
-placeholder = Name
-
-placeholder = Email
-
+placeholder = Name  
+placeholder = Email  
 placeholder = Message
 
-Submit Message
+**Submit Message**
 
-<ion-icon name="location"></ion-icon>
-Address
-20, London, United Kingdom
+<ion-icon name="location"></ion-icon>  
+**Address**  
+Boulder, Colorado, USA
 
-<ion-icon name="mail"></ion-icon>
-Email
-hello@ethan.com
+<ion-icon name="mail"></ion-icon>  
+**Email**  
+rissikumarp@gmail.com
 
-<ion-icon name="call"></ion-icon>
-Phone
-+123 456 7890
-
+<ion-icon name="call"></ion-icon>  
+**Phone**  
++1 720 270 5065
 
 
 #---------- BLOG ----------#
 
-Latest News
+**Latest News**
 
-Checkout My Recent Blogs
+Check out my latest blogs and insights.
 
-Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate
-
-alt = Jim Morisson Says when the musics over turn off the light
-
-Web Development
-
-Jim Morisson Says when the musics over turn off the light
-
-
+alt = "How AI is Transforming Agriculture"  
+**AI in Agriculture**  
+How AI is transforming farming.
 
 #---------- FOOTER ----------#
 
-&copy; 2022 codewithsadee. All Rights Reseverd
+&copy; 2024 **Rissi Kumar Prabhakaran**. All Rights Reserved
 
-Terms & Condition 
-Privacy Policy
-
+- Terms & Conditions  
+- Privacy Policy
 
 
 #---------- BACK TO TOP ----------#
 
-BACK TOP
+**BACK TO TOP**
+
+---
