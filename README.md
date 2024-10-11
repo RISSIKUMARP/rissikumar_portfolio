@@ -1,5 +1,3 @@
-Here's a personalized README file for your GitHub profile based on your portfolio:
-
 ---
 
 ### Hi 👋, I'm Rissi Kumar Prabhakaran  
