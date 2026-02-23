@@ -29,8 +29,6 @@ for (let i = 0; i < navbarLinks.length; i++) {
 
 
 
-
-
 /**
  * back to top & header
  */
@@ -46,3 +44,29 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+
+/**
+ * Timeline scroll-reveal with IntersectionObserver
+ */
+
+const timelineEntries = document.querySelectorAll("[data-reveal]");
+
+if (timelineEntries.length > 0) {
+  const revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  timelineEntries.forEach(function (entry) {
+    revealObserver.observe(entry);
+  });
+}

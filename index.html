@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rissi Kumar</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- 
+
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
- 
+
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,75 +18,75 @@
     href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet">
 
-
-  <style>#popup-message {
-    display: none; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%; 
+  <style>
+  #popup-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff; 
-    padding: 20px 30px; 
-    border-radius: 12px; 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
-    z-index: 1000; 
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     text-align: center;
     animation: popIn 0.5s ease-out, wiggle 0.5s ease-in-out 0.5s;
   }
-  
+
   #popup-message p {
-    margin: 0; 
-    font-size: 20px; 
-    color: #333; 
+    margin: 0;
+    font-size: 20px;
+    color: #333;
     font-weight: bold;
   }
-  
+
   #popup-message::before {
-    content: '📄';
+    content: '\1F4C4';
     font-size: 24px;
     display: block;
     margin-bottom: 10px;
   }
-  
+
   @keyframes popIn {
     0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
     100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
   }
-  
+
   @keyframes wiggle {
     0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
     25% { transform: translate(-50%, -50%) rotate(-5deg); }
     75% { transform: translate(-50%, -50%) rotate(5deg); }
   }
-  
 
   #download-cv-btn {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
-  
+
   #download-cv-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }</style>  
+  }
+  </style>
 </head>
 
 <body id="top">
 
-  <!-- 
+  <!--
     - #HEADER
   -->
-    
+
   <header class="header" data-header>
     <div class="container">
       <a href="#">
         <h1 class="logo">Rissi Kumar Prabhakaran</h1>
       </a>
-  
+
       <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
         <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" class="close-icon"></ion-icon>
       </button>
-  
+
       <nav class="navbar">
         <ul class="navbar-list">
           <li><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
@@ -95,7 +95,7 @@
           <li><a href="#skills" class="navbar-link" data-nav-link>Skills</a></li>
           <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
           <li>
-            <a href="assets\docs\Rissi_Kumar_Prabhakaran_Resume_2025_May.pdf" class="btn btn-primary" id="download-cv-btn" download>Download CV</a>
+            <a href="assets/docs/Rissi_Kumar_Prabhakaran_Master.pdf" class="btn btn-primary" id="download-cv-btn" target="_blank">Download CV</a>
           </li>
         </ul>
       </nav>
@@ -106,59 +106,55 @@
     document.addEventListener('DOMContentLoaded', function() {
       const downloadBtn = document.getElementById('download-cv-btn');
       const popupMessage = document.getElementById('popup-message');
-    
+
       downloadBtn.addEventListener('click', function(event) {
         event.preventDefault();
-    
+
         popupMessage.style.animation = 'none';
-        popupMessage.offsetHeight; 
+        popupMessage.offsetHeight;
         popupMessage.style.animation = null;
-    
+
         popupMessage.style.display = 'block';
-    
+
+        const url = downloadBtn.href;
         setTimeout(function() {
           popupMessage.style.display = 'none';
-          window.location.href = downloadBtn.href;
+          window.open(url, '_blank');
         }, 3000);
       });
     });
-    </script>
-  
+  </script>
+
   <section class="hero" id="home">
     <div class="container">
       <div class="hero-banner">
         <div class="image-wrapper">
-          <img src="assets\images\rissi profile pic1.jpg" alt="Rissi's Photo" class="img-cover">
+          <img src="assets/images/rissi profile pic1.jpg" alt="Rissi's Photo" class="img-cover">
         </div>
-      </div>  
-  
+      </div>
+
       <div class="hero-content">
         <h2 class="hero-title">
           <span>Hello I'm</span>
           <strong>Rissi Kumar Prabhakaran</strong>
           <span>I am a Data Scientist!!</span>
         </h2>
-  
+
         <div class="btn-group">
           <a href="#about" class="btn">About Me</a>
         </div>
       </div>
     </div>
   </section>
-  
+
   <div id="popup-message" style="display: none;">
     <p>A'ight have a look at my CV!</p>
   </div>
 
-
-
-
-
   <main>
     <article>
 
-
-      <!-- 
+      <!--
         - #ABOUT
       -->
 
@@ -166,15 +162,14 @@
         <div class="container">
           <figure class="about-banner">
             <div class="image-wrapper cub-photo-wrapper">
-              <img src="assets\images\cub photo.jpg" width="800" height="652" loading="lazy" alt="Rissi's Cub Photo" class="img-cover">
+              <img src="assets/images/cub photo.jpg" width="800" height="652" loading="lazy" alt="Rissi's Cub Photo" class="img-cover">
             </div>
           </figure>
-      
-          <div class="about-content">
 
+          <div class="about-content">
             <h2 class="h2 section-title">So who am I?</h2>
             <p class="section-text">
-              Well, I am an enthusiastic graduate student in data science with a strong desire to extract meaningful 
+              Well, I am an enthusiastic graduate student in data science with a strong desire to extract meaningful
               insights from raw data for making important decisions. I am excited about the opportunity to use my
               skills in data analysis, machine learning, and statistical modeling to tackle complex problems and provide
               creative, data-driven solutions. Working in fast-paced, ever-changing settings is a perfect fit for my
@@ -185,351 +180,618 @@
         </div>
       </section>
 
-
-
-
-      <!-- 
+      <!--
         - #PORTFOLIO
       -->
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Your Portfolio</title>
-          <link rel="stylesheet" href="styles.css"> 
-      </head>
-      <body>
-      
-      
-          <section class="about">
 
-          </section>
-      
-          <section class="skills">
+      <section class="section portfolio" id="portfolio">
+        <div class="container">
+          <p class="section-text" style="font-size: 24px;">
+            Take a look at some of my work!
+          </p>
 
-          </section>
-     
-          <section class="section portfolio" id="portfolio">
-              <div class="container">
-                  <p class="section-text" style="font-size: 24px;">
-                      Take a look at some of my work!
-                  </p>
-      
-                  <ul class="portfolio-list">
-                      <li>
-                          <a href="https://github.com/RISSIKUMARP/Smart-Fields" class="portfolio-card" style="background-image: url('assets/images/smart fields.jpg')">
-                              <div class="card-content">
-                                  <h3 class="h3 card-title">Smart Fields: Enhancing Agriculture with Machine Learning</h3>
-                                  <span class="btn-link">
-                                      <span>View Work</span>
-                                      <ion-icon name="arrow-forward"></ion-icon>
-                                  </span>
-                              </div>
-                          </a>
-                      </li>
-
-                      <li>
-                          <a href="https://github.com/HarishNandhan/Task-Insights-and-Workload-Overview-Analysis-for-DEN" class="portfolio-card" style="background-image: url('assets/images/DEN.jpeg')">
-                              <div class="card-content">
-                                  <h3 class="h3 card-title">Task-Insights-and-Workload-Overview-Analysis-for-DEN</h3>
-                                  <span class="btn-link">
-                                      <span>View Work</span>
-                                      <ion-icon name="arrow-forward"></ion-icon>
-                                  </span>
-                              </div>
-                          </a>
-                      </li>
-
-                                            <li>
-                          <a href="https://github.com/Olan-Pinto/Data-Mining-CSCI-5502-872-Course-Project" class="portfolio-card" style="background-image: url('assets/images/fire.jpeg')">
-                              <div class="card-content">
-                                  <h3 class="h3 card-title">Fire on Focus</h3>
-                                  <span class="btn-link">
-                                      <span>View Project</span>
-                                      <ion-icon name="arrow-forward"></ion-icon>
-                                  </span>
-                              </div>
-                          </a>
-                      </li>
-                      <li>
-
-                                              <li>
-                          <a href="https://github.com/RISSIKUMARP/Spatiotemporal-Deep-Learning-for-High-Resolution-Flood-Mapping" class="portfolio-card" style="background-image: url('assets/images/flood.jpg')">
-                              <div class="card-content">
-                                  <h3 class="h3 card-title">Spatiotemporal-Deep-Learning-for-High-Resolution-Flood-Mapping</h3>
-                                  <span class="btn-link">
-                                      <span>View Project</span>
-                                      <ion-icon name="arrow-forward"></ion-icon>
-                                  </span>
-                              </div>
-                          </a>
-                      </li>
-                      <li>
-      
-                      <li>
-                          <a href="https://github.com/RISSIKUMARP/AUDIRE" class="portfolio-card" style="background-image: url('assets/images/Audirenew.jpg')">
-                              <div class="card-content">
-                                  <h3 class="h3 card-title">Audire</h3>
-                                  <span class="btn-link">
-                                      <span>View Project</span>
-                                      <ion-icon name="arrow-forward"></ion-icon>
-                                  </span>
-                              </div>
-                          </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/RISSIKUMARP/Enhancing-Public-Health-by-Identifying-Unhealthy-Foods-Promoting-Healthier-Alternatives" class="portfolio-card" style="background-image: url('assets/images/ml img.jpg')">
-                            <div class="card-content">
-                                <h3 class="h3 card-title">Enhancing-Public-Health-by-Identifying-Unhealthy-Foods-Promoting-Healthier-Alternatives</h3>
-                                <span class="btn-link">
-                                    <span>View Project</span>
-                                    <ion-icon name="arrow-forward"></ion-icon>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-
-                      <li>
-                          <a href="https://github.com/RISSIKUMARP/Mini-Projects" class="portfolio-card" style="background-image: url('assets/images/mininew.jpg')">
-                              <div class="card-content">
-                                  <h3 class="h3 card-title">Mini Projects</h3>
-                                  <span class="btn-link">
-                                      <span>View Projects</span>
-                                      <ion-icon name="arrow-forward"></ion-icon>
-                                  </span>
-                              </div>
-                          </a>
+          <ul class="portfolio-list">
+            <li>
+              <a href="https://github.com/RISSIKUMARP/SYNTHETIC-DATA-GENERATION-PLATFORM-WITH-HALLUCINATION-DETECTION" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Synthetic Data Generation Platform With Hallucination Detection</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
             </li>
 
-          </ul>
+            <li>
+              <a href="https://github.com/NiranjanSathish/Retrieval-Based-Question-Answering-model-for-Medical-Drugs" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Retrieval Based Question Answering Model for Medical Drugs</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
 
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Smart-Fields" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Smart Fields: Enhancing Agriculture with Machine Learning</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/TensorTonic-Solutions" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">TensorTonic Solutions</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/HarishNandhan/Task-Insights-and-Workload-Overview-Analysis-for-DEN" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Task Insights and Workload Overview Analysis for DEN</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/Olan-Pinto/Data-Mining-CSCI-5502-872-Course-Project" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Fire on Focus</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Spatiotemporal-Deep-Learning-for-High-Resolution-Flood-Mapping" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Spatiotemporal Deep Learning for High-Resolution Flood Mapping</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/AUDIRE" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Audire</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Enhancing-Public-Health-by-Identifying-Unhealthy-Foods-Promoting-Healthier-Alternatives" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Enhancing Public Health by Identifying Unhealthy Foods</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/dronekit3" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">DroneKit3</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Agno-demos" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Agno Demos</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/MAF-Advanced-MultiAgent" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">MAF Advanced MultiAgent</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Microsoft-agent-Framework" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Microsoft Agent Framework</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/LLM-Exploration" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">LLM Exploration</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Spotify-2024-Analysis" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Spotify 2024 Analysis</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Automation-in-US-A-Statistical-and-Predictive-Analysis-of-State-Level-Employment-Data" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Automation in US: Statistical and Predictive Analysis of State-Level Employment Data</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/RISSIKUMARP/Crew-AI" class="portfolio-card">
+                <div class="card-content">
+                  <h3 class="h3 card-title">Crew AI</h3>
+                  <span class="btn-link">
+                    <span>View Project</span>
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
+      <!--
+        - #EXPERIENCE
+      -->
 
-<!--experience-->
-<p class="section-subtitle">Professional Experience</p>
-<div class="timeline-horizontal">
+      <section class="section experience" id="experience">
+        <div class="container">
+          <p class="section-subtitle">Professional Experience</p>
 
-  <div class="timeline-step">
-    <div class="timeline-box">
-      <h3>
-        <a href="https://www.pantechelearning.com/" target="_blank" style="color: #222; text-decoration: none;">
-          Pantech E-Learning
-        </a>
-      </h3>
-      <p>AI Engineer (Jun – Nov 2022)</p>
-    </div>
-    <div class="timeline-circle">2022</div>
-  </div>
+          <div class="timeline-vertical">
 
-  <div class="timeline-step">
-    <div class="timeline-box">
-      <h3>
-        <a href="https://vloginnovations.com" target="_blank" style="color: #222; text-decoration: none;">
-          Vlog Innovations
-        </a>
-      </h3>
-      <p>AI Engineer (Jan – Jun 2023)</p>
-    </div>
-    <div class="timeline-circle">2023</div>
-  </div>
+            <div class="timeline-entry" data-reveal>
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <h3>
+                  <a href="https://www.pantechelearning.com/" target="_blank">Pantech E-Learning</a>
+                </h3>
+                <p class="timeline-role">AI Engineer Intern</p>
+                <p class="timeline-meta">Jun 2022 - Nov 2022 &middot; Chennai, India</p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">RoBERTa</span>
+                  <span class="tech-tag">HuggingFace</span>
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">ONNX Runtime</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">XGBoost</span>
+                  <span class="tech-tag">LightGBM</span>
+                  <span class="tech-tag">scikit-learn</span>
+                  <span class="tech-tag">SHAP</span>
+                  <span class="tech-tag">Optuna</span>
+                  <span class="tech-tag">Power BI</span>
+                  <span class="tech-tag">Docker</span>
+                </div>
+              </div>
+            </div>
 
-  <div class="timeline-step">
-    <div class="timeline-box">
-      <h3>
-        <a href="https://www.kashmirworldfoundation.org/" target="_blank" style="color: #222; text-decoration: none;">
-          Kashmir World Foundation
-        </a>
-      </h3>
-      <p>BioAcoustics AI Intern</p>
-    </div>
-    <div class="timeline-circle">2025</div>
-  </div>
+            <div class="timeline-entry" data-reveal>
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <h3>
+                  <a href="https://vloginnovations.com" target="_blank">Vlog Innovations</a>
+                </h3>
+                <p class="timeline-role">AI Engineer Intern</p>
+                <p class="timeline-meta">Jan 2023 - Jun 2023 &middot; Chennai, India</p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">FAISS</span>
+                  <span class="tech-tag">Sentence Transformers</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">NumPy</span>
+                  <span class="tech-tag">GPT-3.5</span>
+                  <span class="tech-tag">DistilBERT</span>
+                  <span class="tech-tag">MLflow</span>
+                  <span class="tech-tag">scikit-learn</span>
+                  <span class="tech-tag">Matplotlib</span>
+                  <span class="tech-tag">W&B</span>
+                </div>
+              </div>
+            </div>
 
-</div>
+            <div class="timeline-entry" data-reveal>
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <h3>
+                  <a href="https://www.kashmirworldfoundation.org/" target="_blank">Kashmir World Foundation</a>
+                </h3>
+                <p class="timeline-role">BioAcoustics AI Intern</p>
+                <p class="timeline-meta">May 2025 - Aug 2025 &middot; Great Falls, VA</p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">BirdNET</span>
+                  <span class="tech-tag">YamNET</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Spectrogram Analysis</span>
+                  <span class="tech-tag">Audio Processing</span>
+                </div>
+              </div>
+            </div>
 
+            <div class="timeline-entry" data-reveal>
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <h3>
+                  <a href="https://www.kashmirworldfoundation.org/" target="_blank">Kashmir World Foundation</a>
+                </h3>
+                <p class="timeline-role">AI Data Engineer</p>
+                <p class="timeline-meta">Aug 2025 - Present &middot; Great Falls, VA</p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">Agno Framework</span>
+                  <span class="tech-tag">DroneKit</span>
+                  <span class="tech-tag">MAVLink</span>
+                  <span class="tech-tag">ArduPilot SITL</span>
+                  <span class="tech-tag">OpenRouter API</span>
+                  <span class="tech-tag">RAG</span>
+                  <span class="tech-tag">Vector DB</span>
+                  <span class="tech-tag">LLM Agents</span>
+                </div>
+              </div>
+            </div>
 
+          </div>
+        </div>
+      </section>
 
+      <!--
+        - #ACHIEVEMENTS
+      -->
 
-<section class="section achievements" id="achievements">
-  <div class="container">
-    <p class="section-subtitle">Achievements</p>
-    <h2 class="h2 section-title">Academic & Professional Highlights</h2>
+      <section class="section achievements" id="achievements">
+        <div class="container">
+          <p class="section-subtitle">Achievements</p>
+          <h2 class="h2 section-title">Academic & Professional Highlights</h2>
 
-    <div class="cert-grid">
+          <div class="cert-grid">
 
-      <!-- IEEE Paper -->
-      <div class="cert-card">
-        <h3>
-  <a href="https://ieeexplore.ieee.org/abstract/document/10531419" target="_blank" style="text-decoration: none; color: #222;">
-    IEEE Research Paper – Smart Fields
-  </a>
-</h3>
-        <p>
-          Published a research paper titled <strong>"Smart Fields: Enhancing Agriculture with AI"</strong>. It explores how integrating deep learning models with IoT devices can optimize irrigation, pest control, and crop monitoring.
-        </p>
-        <a href="https://ieeexplore.ieee.org/abstract/document/10531419" target="_blank" class="cert-btn">
-          View Full Paper
-        </a>
-      </div>
+            <div class="cert-card">
+              <h3>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10531419" target="_blank" style="text-decoration: none; color: #222;">
+                  IEEE Research Paper - Smart Fields
+                </a>
+              </h3>
+              <p>
+                Published a research paper titled <strong>"Smart Fields: Enhancing Agriculture with AI"</strong>. It explores how integrating deep learning models with IoT devices can optimize irrigation, pest control, and crop monitoring.
+              </p>
+              <a href="https://ieeexplore.ieee.org/abstract/document/10531419" target="_blank" class="cert-btn">
+                View Full Paper
+              </a>
+            </div>
 
-      <!-- Innoventzz -->
-      <div class="cert-card">
-       <h3>
-  <a href="https://www.instagram.com/innoventzz_rec/" target="_blank" style="text-decoration: none; color: #222;">
-    Innoventzz
-  </a>
-</h3>
-        <p>
-          Overall coordinator for Innoventzz 2022 and 2024 — large-scale AI symposiums with over 3000 participants, managing multi-track technical and non-technical events with a 30-member core team.
-        </p>
-      </div>
+            <div class="cert-card">
+              <h3>
+                <a href="https://www.instagram.com/innoventzz_rec/" target="_blank" style="text-decoration: none; color: #222;">
+                  Innoventzz
+                </a>
+              </h3>
+              <p>
+                Overall coordinator for Innoventzz 2022 and 2024 - large-scale AI symposiums with over 3000 participants, managing multi-track technical and non-technical events with a 30-member core team.
+              </p>
+            </div>
 
-      <!-- Enactus -->
-      <div class="cert-card">
-        <h3>
-  <a href="https://www.instagram.com/enactusrec/?hl=en" target="_blank" style="text-decoration: none; color: #222;">
-    Enactus
-  </a>
-</h3>
-        <p>
-          Served as Marketing Associate at ENACTUS, contributing to the award-winning IKEBANA initiative aimed at innovative social solutions.
-        </p>
-        <a href="assets/docs/Rissi Kumar P - Marketing Associate.pdf" target="_blank" class="cert-btn">
-          View Certification
-        </a>
-      </div>
+            <div class="cert-card">
+              <h3>
+                <a href="https://www.instagram.com/enactusrec/?hl=en" target="_blank" style="text-decoration: none; color: #222;">
+                  Enactus
+                </a>
+              </h3>
+              <p>
+                Served as Marketing Associate at ENACTUS, contributing to the award-winning IKEBANA initiative aimed at innovative social solutions.
+              </p>
+              <a href="assets/docs/Rissi Kumar P - Marketing Associate.pdf" target="_blank" class="cert-btn">
+                View Certification
+              </a>
+            </div>
 
-      <!-- Lema Labs -->
-      <div class="cert-card">
-     <h3>
-  <a href="https://www.linkedin.com/company/lema-labs/" target="_blank" style="text-decoration: none; color: #222;">
-    Lema Labs
-  </a>
-</h3>
-        <p>
-          Completed a 13-week hands-on course on ML (SVM, Random Forest, NLP, Neural Networks) with strong focus on EDA and performance optimization.
-        </p>
-        <a href="assets/docs/13 week course ML CCC Base.pdf" target="_blank" class="cert-btn">
-          View Certification
-        </a>
-      </div>
+            <div class="cert-card">
+              <h3>
+                <a href="https://www.linkedin.com/company/lema-labs/" target="_blank" style="text-decoration: none; color: #222;">
+                  Lema Labs
+                </a>
+              </h3>
+              <p>
+                Completed a 13-week hands-on course on ML (SVM, Random Forest, NLP, Neural Networks) with strong focus on EDA and performance optimization.
+              </p>
+              <a href="assets/docs/13 week course ML CCC Base.pdf" target="_blank" class="cert-btn">
+                View Certification
+              </a>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
-      <!-- 
+      <!--
         - #SKILLS
       -->
 
       <section class="section skills" id="skills">
         <div class="container">
           <p class="section-subtitle">Skills</p>
-      
-          
-          <ul class="skills-list">
-            <li class="skills-item">
-              <div class="skill-box">
+
+          <div class="skills-categories">
+
+            <div class="skills-category">
+              <div class="category-header">
                 <i class="fas fa-code"></i>
-                <h3 class="skills-title">Languages - Python, R</h3>
+                <h3>Languages</h3>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fas fa-database"></i>
-                <h3 class="skills-title">Database - SQL, NOSQL[MongoDB]</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">R</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+                <span class="skill-pill">Bash</span>
+                <span class="skill-pill">MATLAB</span>
+                <span class="skill-pill">Scala</span>
+                <span class="skill-pill">Julia</span>
+                <span class="skill-pill">PySpark</span>
+                <span class="skill-pill">Java</span>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fas fa-chart-bar"></i>
-                <h3 class="skills-title">Data Analysis - NUMPY, PANDAS, MATPLOTLIB, SEABORN</h3>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fas fa-chart-pie"></i>
-                <h3 class="skills-title">Data Visualization - MS EXCEL, POWER-BI, TABLEAU</h3>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fab fa-git-alt"></i>
-                <h3 class="skills-title">Git</h3>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
                 <i class="fas fa-brain"></i>
-                <h3 class="skills-title">ML - SCIKIT_LEARN, DL - TENSORFLOW, PYTORCH</h3>              
+                <h3>ML/DL & NLP</h3>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fab fa-aws"></i>
-                <h3 class="skills-title">Cloud - AWS</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">TensorFlow</span>
+                <span class="skill-pill">PyTorch</span>
+                <span class="skill-pill">Keras</span>
+                <span class="skill-pill">scikit-learn</span>
+                <span class="skill-pill">XGBoost</span>
+                <span class="skill-pill">LightGBM</span>
+                <span class="skill-pill">Hugging Face</span>
+                <span class="skill-pill">Transformers</span>
+                <span class="skill-pill">LLMs</span>
+                <span class="skill-pill">BERT</span>
+                <span class="skill-pill">GPT</span>
+                <span class="skill-pill">RAG</span>
+                <span class="skill-pill">OpenCV</span>
+                <span class="skill-pill">NLTK</span>
+                <span class="skill-pill">SpaCy</span>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fab fa-flask flask-icon"></i>
-                <h3 class="skills-title">Flask</h3>
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
+                <i class="fas fa-robot"></i>
+                <h3>Agentic AI</h3>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fab fa-docker"></i>
-                <h3 class="skills-title">Docker</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">GPT-4</span>
+                <span class="skill-pill">Claude</span>
+                <span class="skill-pill">Gemini</span>
+                <span class="skill-pill">Fine-tuning</span>
+                <span class="skill-pill">Prompt Engineering</span>
+                <span class="skill-pill">Multi-Agent Systems</span>
+                <span class="skill-pill">LangChain</span>
+                <span class="skill-pill">LlamaIndex</span>
+                <span class="skill-pill">Agno AI</span>
+                <span class="skill-pill">RAG Systems</span>
+                <span class="skill-pill">Context Engineering</span>
               </div>
-            </li>
-            <li class="skills-item">
-              <div class="skill-box">
-                <i class="fas fa-box"></i>
-                <h3 class="skills-title">BentoML</h3>
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Data Science & Statistics</h3>
               </div>
-            </li>
-          </ul>
+              <div class="skill-pills">
+                <span class="skill-pill">Pandas</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">SciPy</span>
+                <span class="skill-pill">Matplotlib</span>
+                <span class="skill-pill">Seaborn</span>
+                <span class="skill-pill">A/B Testing</span>
+                <span class="skill-pill">Hypothesis Testing</span>
+                <span class="skill-pill">Time Series Analysis</span>
+                <span class="skill-pill">Feature Engineering</span>
+                <span class="skill-pill">KPI Development</span>
+                <span class="skill-pill">Regression</span>
+                <span class="skill-pill">Predictive Modeling</span>
+                <span class="skill-pill">Cohort Analysis</span>
+                <span class="skill-pill">Funnel Analysis</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
+                <i class="fas fa-cogs"></i>
+                <h3>MLOps & Big Data</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Kubernetes</span>
+                <span class="skill-pill">MLflow</span>
+                <span class="skill-pill">Apache Spark</span>
+                <span class="skill-pill">Apache Kafka</span>
+                <span class="skill-pill">Hadoop</span>
+                <span class="skill-pill">PySpark</span>
+                <span class="skill-pill">Databricks</span>
+                <span class="skill-pill">Apache Airflow</span>
+                <span class="skill-pill">Prefect</span>
+                <span class="skill-pill">dbt</span>
+                <span class="skill-pill">HDFS</span>
+                <span class="skill-pill">Hive</span>
+                <span class="skill-pill">CI/CD</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud & Databases</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">AWS</span>
+                <span class="skill-pill">GCP</span>
+                <span class="skill-pill">Azure</span>
+                <span class="skill-pill">PostgreSQL</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">Snowflake</span>
+                <span class="skill-pill">Redshift</span>
+                <span class="skill-pill">BigQuery</span>
+                <span class="skill-pill">Redis</span>
+                <span class="skill-pill">Pinecone</span>
+                <span class="skill-pill">ChromaDB</span>
+                <span class="skill-pill">FAISS</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
+                <i class="fas fa-chart-pie"></i>
+                <h3>BI & Visualization</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Power BI</span>
+                <span class="skill-pill">Tableau</span>
+                <span class="skill-pill">Excel</span>
+                <span class="skill-pill">Looker</span>
+                <span class="skill-pill">Google Analytics</span>
+                <span class="skill-pill">Plotly</span>
+                <span class="skill-pill">Dash</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <div class="category-header">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Data Modeling & APIs</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Star Schema</span>
+                <span class="skill-pill">Snowflake Schema</span>
+                <span class="skill-pill">Dimensional Modeling</span>
+                <span class="skill-pill">Data Normalization</span>
+                <span class="skill-pill">RESTful APIs</span>
+                <span class="skill-pill">GraphQL</span>
+                <span class="skill-pill">Flask</span>
+                <span class="skill-pill">FastAPI</span>
+                <span class="skill-pill">Microservices</span>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
-<!-- 
+
+      <!--
         - #CONTACT
       -->
+
       <section class="contact">
         <h2 class="section-title" style="color: orange;">Get in Touch</h2>
         <ul class="contact-list">
-            <li class="contact-item">
-                <a href="mailto:ripr8775@colorado.edu" class="contact-item-link">
-                    <i class="fas fa-envelope contact-icon"></i> <!-- Email Icon -->
-                    <span class="contact-item-title">Email</span>
-                </a>
-            </li>
+          <li class="contact-item">
+            <a href="mailto:ripr8775@colorado.edu" class="contact-item-link">
+              <i class="fas fa-envelope contact-icon"></i>
+              <span class="contact-item-title">Email</span>
+            </a>
+          </li>
           <li class="contact-item">
             <a href="https://www.linkedin.com/in/rissi-kumar-prabhakaran/" class="contact-item-link" target="_blank">
-              <i class="fab fa-linkedin contact-icon"></i> <!-- LinkedIn Icon -->
+              <i class="fab fa-linkedin contact-icon"></i>
               <span class="contact-item-title">LinkedIn</span>
             </a>
           </li>
           <li class="contact-item">
             <a href="https://github.com/RISSIKUMARP" class="contact-item-link" target="_blank">
-              <i class="fab fa-github contact-icon"></i> <!-- GitHub Icon -->
+              <i class="fab fa-github contact-icon"></i>
               <span class="contact-item-title">GitHub</span>
             </a>
           </li>
           <li class="contact-item">
             <div class="contact-item-content">
-                <i class="fas fa-phone contact-icon"></i> <!-- Phone Call Icon -->
-                <span class="contact-item-title">Call</span>
-                <span class="contact-item-info">+1 720-270-5065</span>
+              <i class="fas fa-phone contact-icon"></i>
+              <span class="contact-item-title">Call</span>
+              <span class="contact-item-info">+1 303-591-9117</span>
             </div>
-        </li>
+          </li>
         </ul>
       </section>
 
+    </article>
+  </main>
 
-  <!-- 
+  <!--
     - #FOOTER
   -->
   <footer class="footer">
@@ -539,23 +801,21 @@
       </p>
     </div>
   </footer>
-  
 
-  <!-- 
+  <!--
     - #BACK TO TOP
   -->
 
-  <a href="#top" class="back-to-top" style="color: black;"data-back-to-top>BACK TOP</a>
+  <a href="#top" class="back-to-top" style="color: black;" data-back-to-top>BACK TOP</a>
 
-
-  <!-- 
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
+  <!--
     - ionicon link
-  -->8ew3
+  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
