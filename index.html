@@ -25,10 +25,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #111827;
+    border: 1px solid rgba(255,255,255,0.1);
     padding: 20px 30px;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(88, 166, 255, 0.15);
     z-index: 1000;
     text-align: center;
     animation: popIn 0.5s ease-out, wiggle 0.5s ease-in-out 0.5s;
@@ -37,7 +38,7 @@
   #popup-message p {
     margin: 0;
     font-size: 20px;
-    color: #333;
+    color: #e6edf3;
     font-weight: bold;
   }
 
@@ -92,6 +93,7 @@
           <li><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
           <li><a href="#about" class="navbar-link" data-nav-link>About</a></li>
           <li><a href="#portfolio" class="navbar-link" data-nav-link>Work</a></li>
+          <li><a href="#experience" class="navbar-link" data-nav-link>Experience</a></li>
           <li><a href="#skills" class="navbar-link" data-nav-link>Skills</a></li>
           <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
           <li>
@@ -160,13 +162,13 @@
 
       <section class="section about" id="about">
         <div class="container">
-          <figure class="about-banner">
+          <figure class="about-banner" data-reveal>
             <div class="image-wrapper cub-photo-wrapper">
               <img src="assets/images/cub photo.jpg" width="800" height="652" loading="lazy" alt="Rissi's Cub Photo" class="img-cover">
             </div>
           </figure>
 
-          <div class="about-content">
+          <div class="about-content" data-reveal>
             <h2 class="h2 section-title">So who am I?</h2>
             <p class="section-text">
               Well, I am an enthusiastic graduate student in data science with a strong desire to extract meaningful
@@ -186,12 +188,12 @@
 
       <section class="section portfolio" id="portfolio">
         <div class="container">
-          <p class="section-text" style="font-size: 24px;">
+          <p class="section-text">
             Take a look at some of my work!
           </p>
 
           <ul class="portfolio-list">
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/SYNTHETIC-DATA-GENERATION-PLATFORM-WITH-HALLUCINATION-DETECTION" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Synthetic Data Generation Platform With Hallucination Detection</h3>
@@ -203,7 +205,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/NiranjanSathish/Retrieval-Based-Question-Answering-model-for-Medical-Drugs" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Retrieval Based Question Answering Model for Medical Drugs</h3>
@@ -215,7 +217,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Smart-Fields" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Smart Fields: Enhancing Agriculture with Machine Learning</h3>
@@ -227,7 +229,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/TensorTonic-Solutions" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">TensorTonic Solutions</h3>
@@ -239,7 +241,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/HarishNandhan/Task-Insights-and-Workload-Overview-Analysis-for-DEN" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Task Insights and Workload Overview Analysis for DEN</h3>
@@ -251,7 +253,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/Olan-Pinto/Data-Mining-CSCI-5502-872-Course-Project" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Fire on Focus</h3>
@@ -263,7 +265,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Spatiotemporal-Deep-Learning-for-High-Resolution-Flood-Mapping" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Spatiotemporal Deep Learning for High-Resolution Flood Mapping</h3>
@@ -275,7 +277,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/AUDIRE" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Audire</h3>
@@ -287,7 +289,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Enhancing-Public-Health-by-Identifying-Unhealthy-Foods-Promoting-Healthier-Alternatives" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Enhancing Public Health by Identifying Unhealthy Foods</h3>
@@ -299,7 +301,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/dronekit3" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">DroneKit3</h3>
@@ -311,7 +313,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Agno-demos" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Agno Demos</h3>
@@ -323,7 +325,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/MAF-Advanced-MultiAgent" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">MAF Advanced MultiAgent</h3>
@@ -335,7 +337,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Microsoft-agent-Framework" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Microsoft Agent Framework</h3>
@@ -347,7 +349,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/LLM-Exploration" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">LLM Exploration</h3>
@@ -359,7 +361,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Spotify-2024-Analysis" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Spotify 2024 Analysis</h3>
@@ -371,7 +373,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Automation-in-US-A-Statistical-and-Predictive-Analysis-of-State-Level-Employment-Data" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Automation in US: Statistical and Predictive Analysis of State-Level Employment Data</h3>
@@ -383,7 +385,7 @@
               </a>
             </li>
 
-            <li>
+            <li data-reveal>
               <a href="https://github.com/RISSIKUMARP/Crew-AI" class="portfolio-card">
                 <div class="card-content">
                   <h3 class="h3 card-title">Crew AI</h3>
@@ -513,9 +515,9 @@
 
           <div class="cert-grid">
 
-            <div class="cert-card">
+            <div class="cert-card" data-reveal>
               <h3>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10531419" target="_blank" style="text-decoration: none; color: #222;">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10531419" target="_blank">
                   IEEE Research Paper - Smart Fields
                 </a>
               </h3>
@@ -527,9 +529,9 @@
               </a>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card" data-reveal>
               <h3>
-                <a href="https://www.instagram.com/innoventzz_rec/" target="_blank" style="text-decoration: none; color: #222;">
+                <a href="https://www.instagram.com/innoventzz_rec/" target="_blank">
                   Innoventzz
                 </a>
               </h3>
@@ -538,9 +540,9 @@
               </p>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card" data-reveal>
               <h3>
-                <a href="https://www.instagram.com/enactusrec/?hl=en" target="_blank" style="text-decoration: none; color: #222;">
+                <a href="https://www.instagram.com/enactusrec/?hl=en" target="_blank">
                   Enactus
                 </a>
               </h3>
@@ -552,9 +554,9 @@
               </a>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card" data-reveal>
               <h3>
-                <a href="https://www.linkedin.com/company/lema-labs/" target="_blank" style="text-decoration: none; color: #222;">
+                <a href="https://www.linkedin.com/company/lema-labs/" target="_blank">
                   Lema Labs
                 </a>
               </h3>
@@ -580,7 +582,7 @@
 
           <div class="skills-categories">
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-code"></i>
                 <h3>Languages</h3>
@@ -603,7 +605,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-brain"></i>
                 <h3>ML/DL & NLP</h3>
@@ -627,7 +629,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-robot"></i>
                 <h3>Agentic AI</h3>
@@ -647,7 +649,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-chart-bar"></i>
                 <h3>Data Science & Statistics</h3>
@@ -670,7 +672,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-cogs"></i>
                 <h3>MLOps & Big Data</h3>
@@ -693,7 +695,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-cloud"></i>
                 <h3>Cloud & Databases</h3>
@@ -715,7 +717,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-chart-pie"></i>
                 <h3>BI & Visualization</h3>
@@ -731,7 +733,7 @@
               </div>
             </div>
 
-            <div class="skills-category">
+            <div class="skills-category" data-reveal>
               <div class="category-header">
                 <i class="fas fa-project-diagram"></i>
                 <h3>Data Modeling & APIs</h3>
@@ -757,8 +759,8 @@
         - #CONTACT
       -->
 
-      <section class="contact">
-        <h2 class="section-title" style="color: orange;">Get in Touch</h2>
+      <section class="contact" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
         <ul class="contact-list">
           <li class="contact-item">
             <a href="mailto:ripr8775@colorado.edu" class="contact-item-link">
@@ -796,8 +798,8 @@
   -->
   <footer class="footer">
     <div class="container">
-      <p class="copyright" style="color: white;">
-        &copy; <a href="#" class="copyright-link" style="color: white;">RissiKumarPrabhakaran</a>. All Rights Reserved
+      <p class="copyright">
+        &copy; <a href="#" class="copyright-link">RissiKumarPrabhakaran</a>. All Rights Reserved
       </p>
     </div>
   </footer>
@@ -806,7 +808,7 @@
     - #BACK TO TOP
   -->
 
-  <a href="#top" class="back-to-top" style="color: black;" data-back-to-top>BACK TOP</a>
+  <a href="#top" class="back-to-top" data-back-to-top>BACK TOP</a>
 
   <!--
     - custom js link
